@@ -6,7 +6,7 @@ import weka.core.Instances;
  * Created by qiaoyang on 16-6-3.
  */
 
-public class trainMLModels {
+public class TrainMLModels {
     public static void main(String[] args) {
         int[] nominalIndex = new int[]{1};
         DataParameters dataParameters = new DataParameters(
@@ -24,8 +24,8 @@ public class trainMLModels {
         rf.evaluateModel(data[1]);
         MLUtils.persistModel(rf,dataParameters.getModelPath(),modelParameters.getModelName());
         RandomForestModel model = (RandomForestModel) MLUtils.reloadPersistModel(dataParameters.getModelPath()+modelParameters.getModelName());
-        model.evaluateModel(data[1]);
-        System.out.println(model.predictNewData(new double[]{39,23,1,2009,0,4,0,0,0,0,2,0,0,0,0,0,0,0,4}));
+        //model.evaluateModel(data[1]);
+        System.out.println(model.predictNewData(new double[]{39,23,1,2,0,0,0,0,0,0,2,0,0,0,0,0,0,0,4}));
     }
 
 }
