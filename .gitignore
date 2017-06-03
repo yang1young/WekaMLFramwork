@@ -1,0 +1,11 @@
+src/main/.DS_Store
+.DS_Store
+*.iml
+.idea
+target
+*.log
+src/main/resources/log
+src/main/resources/model
+*.csv
+*.arff
+
